@@ -1,0 +1,5 @@
+{"id":1,"name":"Juhn Smith","age":20, "major":"Computer Science","gpa":3.8,"courses":["Circuit Analytics", "Digital Electronics", "Control Systems"]}
+{"id":2,"name":"Emma Johnson","age":21, "major":"Electrical Engineering","gpa":3.5,"courses":["Circuit Analytics", "Digital Electronics", "Control Systems"]},
+{"id":3,"name":"Michael Brown","age":19, "major":"Business Administrative","gpa":3.2,"courses":["Marketing", "Finance", "Entrepreneurship"]}
+{"id":4,"name":"Emily Wilson","age":22, "major":"Psycology","gpa":3.9,"courses":["Introduction into Psycology", "Abnormal Psycology"]}
+{"id":5,"name":"Wiliam Lee","age":20, "major":"Biology","gpa":3.6,"courses":["Cell Biology", "Genetics", "Ecology"]}
