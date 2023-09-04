@@ -25,13 +25,16 @@ with open("follower_graph.txt","r") as f:
 #Spark Tasks
 #Data Aggregation
 
-from pyspark import SparkContext,SparkConf
-import re
-import time
+from pyspark.sql import SparkSession
+from pyspark.sql.functions import sum
 
-with open("sales.csv","r") as f:
-    text = f.readlines()
-    
+spark = SparkSession.builder.appName("TotalAmount").getOrCreate()
+
+data = spark.read.options(delimiter=",").csv("sales.csv", header=True, inferSchema=True)
+average_scores = data.groupBy("Category").agg(sum("Amount").alias("TotalAmount"))
+
+average_scores.show()
+spark.stop()
 
 #Log Analysis
 from pyspark import SparkConf, SparkContext
