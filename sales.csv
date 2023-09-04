@@ -1,6 +1,15 @@
+<<<<<<< HEAD
 Product,Category,Amount
 Product A,Electronics,100
 Product B,Clothing,50
 Product C,Electronics,200
 Product D,Clothing,75
 Product E,Electronics,150
+=======
+Product,Category,Amount
+Product A,Electronics,100
+Product B,Clothing,50
+Product C,Electronics,200
+Product D,Clothing,75
+Product E,Electronics,150
+>>>>>>> aa525cd710b83107ae6e676dbb4345ac3e36c0f4
