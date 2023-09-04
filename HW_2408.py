@@ -34,3 +34,26 @@ with open("sales.csv","r") as f:
     
 
 #Log Analysis
+from pyspark import SparkConf, SparkContext
+
+conf = SparkConf().setAppName("LogAnalysis")
+sc = SparkContext(conf=conf)
+
+lines = sc.textFile("server_log.txt")
+
+
+def parse_log(line):
+    web, ip = line.split(" ")
+    return (web, ip)
+
+
+sorted_web = (
+    lines.flatMap(lambda line: line.split())
+    .map(parse_log)
+    .reduceByKey(lambda a, b: a + b)
+)
+
+for web, count in sorted_web:
+    print(f"URL: {web}, Access Count: {ip}")
+
+sc.stop()
